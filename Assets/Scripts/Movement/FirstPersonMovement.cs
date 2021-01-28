@@ -16,6 +16,8 @@ public class FirstPersonMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     private bool isGrounded;
+
+    public LayerMask pickable;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -24,6 +26,14 @@ public class FirstPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit hit_button;
+
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit_button, 2f, pickable) && Input.GetKeyDown(KeyCode.E))
+        {
+            hit_button.transform.GetComponent<PickDrop>().pickedUp = true;
+            hit_button.transform.GetComponent<PickDrop>().nOfE++;
+        }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -36,7 +46,7 @@ public class FirstPersonMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * gravity);
         }
-        
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         
