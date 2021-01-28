@@ -298,10 +298,10 @@
 /define:UNITY_STANDALONE
 /define:UNITY_STANDALONE_OSX
 /define:UNITY_TEAM_LICENSE
+"Assets/MouseLook.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Interactions/Interactable.cs"
 "Assets/Scripts/Interactions/InteractableCube.cs"
-"Assets/Scripts/Interactions/InteractionUI.cs"
 "Assets/Scripts/Movement/AnimationStateController.cs"
 "Assets/Scripts/Movement/ThirdPersonMovement.cs"
 "Assets/Scripts/Rewind/PointInTime.cs"

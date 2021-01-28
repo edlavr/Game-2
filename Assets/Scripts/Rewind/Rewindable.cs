@@ -9,8 +9,13 @@ public class Rewindable : MonoBehaviour
     private GameManager _gameManager;
 
     public List<PointInTime> pointsInTime;
+    private Rigidbody rb;
+    private bool _isrbNotNull;
+
     public virtual void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        _isrbNotNull = rb != null;
         _gameManager = FindObjectOfType<GameManager>();
         pointsInTime = new List<PointInTime>();
         foreach (Transform child in transform){
@@ -52,6 +57,11 @@ public class Rewindable : MonoBehaviour
     {
         if (pointsInTime.Count > 0)
         {
+            if (_isrbNotNull)
+            {
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
             Time.timeScale = 2f;
             PointInTime pointInTime = pointsInTime[0];
             transform.position = pointInTime.position;

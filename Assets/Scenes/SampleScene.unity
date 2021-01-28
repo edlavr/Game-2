@@ -387,10 +387,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 785892114359333373, guid: e5de14438e22c432e8352cb7dac15fe7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5de14438e22c432e8352cb7dac15fe7, type: 3}
 --- !u!1001 &1110869455172463018
@@ -739,11 +735,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8718682669676625627, guid: f7fd11b51758142aba0949e99f336beb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08458615
+      value: 0.08458616
       objectReference: {fileID: 0}
     - target: {fileID: 8718682669676625627, guid: f7fd11b51758142aba0949e99f336beb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.009200606
+      value: -0.0092006065
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7fd11b51758142aba0949e99f336beb, type: 3}

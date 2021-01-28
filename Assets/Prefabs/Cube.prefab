@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2124006678803809521}
   - component: {fileID: 726547615192099594}
   - component: {fileID: 832911063}
+  - component: {fileID: 1101268177}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -110,12 +111,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feacb3e689cc64d3bab1ec1b2e3d9b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameManager: {fileID: 0}
   visibleRadius: 3
   interactionRadius: 2
+  isInteractable: 1
   leftText: {fileID: 2124006679781089838}
   rightText: {fileID: 2124006680015930902}
   leftAction: forward
   rightAction: 
+  thrust: 1000
 --- !u!114 &832911063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +132,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be96ede790bdf4df6a09801856fa1f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1101268177
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124006678803809520}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2124006679649012607
 GameObject:
   m_ObjectHideFlags: 0

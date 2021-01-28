@@ -11,6 +11,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactions/InteractableCube.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactions/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MouseLook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirstPersonMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/4d/ffdd16d7/Void.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -26,11 +28,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/RewindablePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rewindable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactions/InteractionUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactions/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/ThirdPersonMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rewind/Rewindable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactions/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactions/InteractableCube.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseLook.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirstPersonMovement.cs" />
       </list>
     </option>
   </component>
@@ -74,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611448795686</updated>
       <workItem from="1611448805111" duration="37860000" />
+      <workItem from="1611844918793" duration="11679000" />
     </task>
     <servers />
   </component>

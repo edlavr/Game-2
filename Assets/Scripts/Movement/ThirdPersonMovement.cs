@@ -31,10 +31,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
 
         //jump
         isGrounded = Physics.CheckSphere(transform.position, groundDistance, groundMask);
@@ -50,14 +46,13 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         
         //gravity
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * Time.deltaTime * 10;
         controller.Move(velocity * Time.deltaTime);
-        
-        //walk
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
+        Debug.Log((Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
+        //walk
+        Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+        
 
         bool runPressed = Input.GetKey("left shift");
         if (runPressed) {
@@ -66,14 +61,14 @@ public class ThirdPersonMovement : MonoBehaviour
             speed = 4;
         }
 
-        if(direction.magnitude >= 0.1f)
+        if(direction.magnitude >= 0.001f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _camera.transform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            controller.Move(moveDir.normalized * (speed * Time.deltaTime));
         }
     }
 }

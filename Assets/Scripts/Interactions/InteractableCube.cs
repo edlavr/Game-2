@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class InteractableCube : Interactable
 {
+    private Rigidbody rb;
+    public float thrust = 1f;
+    private bool isCoroutineRunning = false;
+    protected override void Start()
+    {
+        base.Start();
+        rb = GetComponent<Rigidbody>();
+    }
+
     protected override void InteractLeft()
     {
         if (!_gameManager.isRecording)
@@ -11,8 +20,16 @@ public class InteractableCube : Interactable
             _gameManager.isRecording = true;
             gameObject.GetComponent<Rewindable>().pointsInTime.Insert(0, new PointInTime(transform.position, transform.rotation));
         }
-        gameObject.transform.position += Vector3.forward;
-        StartCoroutine(StopInFive());
+        rb.AddRelativeForce(transform.forward * thrust);
+        i = 5;
+        if (isCoroutineRunning)
+        {
+            StopCoroutine(StopInFive());
+        }
+        else
+        {
+            StartCoroutine(StopInFive());
+        }
     }
     
     protected override void InteractRight()
@@ -28,7 +45,8 @@ public class InteractableCube : Interactable
 
     private IEnumerator StopInFive()
     {
-        for (int i = 5; i >= 0; i--)
+        isCoroutineRunning = true;
+        for (i = 5; i >= 0; i--)
         {
             if (!_gameManager.isRewinding)
             {
@@ -36,6 +54,7 @@ public class InteractableCube : Interactable
                 yield return new WaitForSeconds(1f);
             }
         }
+        isCoroutineRunning = false;
         _gameManager.notifications.text = "";
         _gameManager.isRecording = false;
     }

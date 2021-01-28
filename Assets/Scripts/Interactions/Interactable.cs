@@ -7,6 +7,7 @@ using TMPro;
 
 public class Interactable : MonoBehaviour
 {
+    [HideInInspector]
     public GameManager _gameManager;
 
     private Collider playerCollider;
@@ -28,6 +29,8 @@ public class Interactable : MonoBehaviour
     private Quaternion cameraRotation;
     private Transform _canvas;
     private CanvasGroup _canvasGroup;
+
+    protected int i;
     protected virtual void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
