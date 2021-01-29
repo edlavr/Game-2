@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public KeyCode interactKeyLeft = KeyCode.Q;
     public KeyCode interactKeyRight = KeyCode.E;
 
+    public float mouseSensitivity = 150f;
     
     public bool isRecording = false;
     public bool isRewinding = false;

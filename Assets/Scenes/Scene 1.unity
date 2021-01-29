@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8da0e6009d22414889bb7a169965a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 150
+  _gameManager: {fileID: 0}
   playerBody: {fileID: 785892114014143607}
 --- !u!224 &875608358 stripped
 RectTransform:
@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dest: {fileID: 1597040084}
+  _gameManager: {fileID: 0}
   pickedUp: 0
   nOfE: 0
 --- !u!54 &1097581392

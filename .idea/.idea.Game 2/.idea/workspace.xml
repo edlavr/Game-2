@@ -28,7 +28,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Rewindable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactions/InteractionUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Notification.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/ThirdPersonMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rewind/Rewindable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactions/Interactable.cs" />
@@ -36,10 +35,11 @@
         <option value="$PROJECT_DIR$/Assets/MouseLook.cs" />
         <option value="$PROJECT_DIR$/Assets/FirstPersonMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/GameButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/MouseLook.cs" />
-        <option value="$PROJECT_DIR$/Assets/PickDrop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/FirstPersonMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactions/GameButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Movement/MouseLook.cs" />
+        <option value="$PROJECT_DIR$/Assets/PickDrop.cs" />
       </list>
     </option>
   </component>
@@ -83,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611448795686</updated>
       <workItem from="1611448805111" duration="37860000" />
-      <workItem from="1611844918793" duration="19337000" />
+      <workItem from="1611844918793" duration="20430000" />
     </task>
     <servers />
   </component>
