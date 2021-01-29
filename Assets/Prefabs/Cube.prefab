@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 726547615192099594}
   - component: {fileID: 832911063}
   - component: {fileID: 1101268177}
+  - component: {fileID: 1057240819}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -113,13 +114,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 0}
   visibleRadius: 3
-  interactionRadius: 2
+  interactionRadius: 2.5
   isInteractable: 1
   leftText: {fileID: 2124006679781089838}
   rightText: {fileID: 2124006680015930902}
-  leftAction: forward
-  rightAction: 
+  leftAction: Shoot
+  rightAction: Pick up
   thrust: 1000
+  dest: {fileID: 0}
+  nOfE: 0
 --- !u!114 &832911063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +151,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &1057240819
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124006678803809520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2124006679649012607
 GameObject:
   m_ObjectHideFlags: 0

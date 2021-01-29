@@ -5,16 +5,22 @@ using UnityEngine;
 
 public class GameButton : MonoBehaviour
 {
+    public GameManager _gameManager;
     private Material _material;
     public bool active = false;
     void Start()
     {
-        _material = GetComponent<MeshRenderer>().material;
+        _gameManager = GetComponent<GameManager>();
+        _material = GetComponent<MeshRenderer>().materials[1];
     }
 
     private void Update()
     {
         _material.color = active ? Color.green : Color.red;
+        if (active)
+        {
+            Debug.Log("button");
+        }
     }
 
     private void OnCollisionStay()

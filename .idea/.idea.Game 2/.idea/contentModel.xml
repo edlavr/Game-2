@@ -4,13 +4,15 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="PickDrop.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="GameManager.cs" t="Include" />
           <e p="Interactions" t="Include">
             <e p="GameButton.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="InteractableCube.cs" t="Include" />
+          </e>
+          <e p="Legacy" t="Include">
+            <e p="PickDrop.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
             <e p="AnimationStateController.cs" t="Include" />
@@ -22,6 +24,9 @@
             <e p="PointInTime.cs" t="Include" />
             <e p="Rewindable.cs" t="Include" />
             <e p="RewindablePlayer.cs" t="Include" />
+          </e>
+          <e p="Room" t="Include">
+            <e p="OpenDoor.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Notification.cs" t="Include" />

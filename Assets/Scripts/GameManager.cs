@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public bool isRecording = false;
     public bool isRewinding = false;
     public bool isRewindable = true;
+    public bool pickedUp = false;
+    
+    // public int nOfE = 0;
 
     void Update()
     {

@@ -48,6 +48,8 @@ MonoBehaviour:
   rewindKey: 114
   interactKeyLeft: 113
   interactKeyRight: 101
+  mouseSensitivity: 150
   isRecording: 0
   isRewinding: 0
   isRewindable: 1
+  pickedUp: 0

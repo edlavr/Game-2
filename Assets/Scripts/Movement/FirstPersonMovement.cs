@@ -31,8 +31,7 @@ public class FirstPersonMovement : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit_button, 2f, pickable) && Input.GetKeyDown(KeyCode.E))
         {
-            hit_button.transform.GetComponent<PickDrop>().pickedUp = true;
-            hit_button.transform.GetComponent<PickDrop>().nOfE++;
+            hit_button.transform.GetComponent<InteractableCube>().nOfE++;
         }
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
