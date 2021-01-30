@@ -37,4 +37,15 @@ public class LevelManagerBase : MonoBehaviour
         mat.SetColor("_EmissionColor", (decider ? Color.green: Color.red) * 3);
         mat.color = decider ? Color.green : Color.red;
     }
+    
+    public void Illuminate(GameObject[] objs, List<Material> mats, bool decider)
+    {
+        for (int i = 0; i < objs.Length; i++)
+        {
+            mats[i].EnableKeyword("_EMISSION");
+            DynamicGI.SetEmissive(objs[i].GetComponent<MeshRenderer>(), (decider ? Color.green: Color.red) * 1f);
+            mats[i].SetColor("_EmissionColor", (decider ? Color.green: Color.red) * 1);
+            mats[i].color = decider ? Color.green : Color.red;
+        }
+    }
 }

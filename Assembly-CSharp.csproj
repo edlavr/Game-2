@@ -50,14 +50,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Interactions\Interactable.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Movement\FirstPersonMovement.cs" />
-     <Compile Include="Assets\Scripts\Movement\ThirdPersonMovement.cs" />
+     <Compile Include="Assets\Scripts\Interactions\PhysicsObject.cs" />
+     <Compile Include="Assets\Scripts\Legacy\ThirdPersonMovement.cs" />
      <Compile Include="Assets\Scripts\Interactions\GameButton.cs" />
      <Compile Include="Assets\Scripts\Interactions\InteractableCube.cs" />
      <Compile Include="Assets\Scripts\Rewind\Rewindable.cs" />
+     <Compile Include="Assets\Scripts\Managers\LevelManagerBase.cs" />
      <Compile Include="Assets\Scripts\Room\OpenDoor.cs" />
      <Compile Include="Assets\Scripts\Rewind\RewindablePlayer.cs" />
      <Compile Include="Assets\Scripts\Legacy\PickDrop.cs" />
@@ -65,8 +68,6 @@
      <Compile Include="Assets\Scripts\Managers\Level1Manager.cs" />
      <Compile Include="Assets\Scripts\UI\Notification.cs" />
      <Compile Include="Assets\Scripts\Rewind\PointInTime.cs" />
-     <Compile Include="Assets\Scripts\Managers\LevelManagerBase.cs" />
-     <Compile Include="Assets\Scripts\Interactions\PhysicsObject.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -121,8 +122,14 @@
  <Reference Include="Unity.Timeline">
  <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
  <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
@@ -138,12 +145,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>/Users/edlavr/Documents/Files/Year 3/GameDev/Game 2/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

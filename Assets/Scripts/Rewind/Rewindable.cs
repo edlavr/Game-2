@@ -77,7 +77,7 @@ public class Rewindable : MonoBehaviour
     
     public void Record()
     {
-        // Cursor.lockState = CursorLockMode.Locked;
+        // c = CursorLockMode.Locked;
         // Cursor.lockState = CursorLockMode.None;
 
         if (_gameManager.isRewindable)

@@ -13,7 +13,9 @@
           </e>
           <e p="Legacy" t="Include">
             <e p="PickDrop.cs" t="Include" />
+            <e p="ThirdPersonMovement.cs" t="Include" />
           </e>
+          <e p="MainMenu.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="Level1Manager.cs" t="Include" />
@@ -23,7 +25,6 @@
             <e p="AnimationStateController.cs" t="Include" />
             <e p="FirstPersonMovement.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
-            <e p="ThirdPersonMovement.cs" t="Include" />
           </e>
           <e p="Rewind" t="Include">
             <e p="PointInTime.cs" t="Include" />

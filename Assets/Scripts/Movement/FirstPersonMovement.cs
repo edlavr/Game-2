@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FirstPersonMovement : MonoBehaviour
 {
@@ -24,14 +25,13 @@ public class FirstPersonMovement : MonoBehaviour
 
     [Header("InteractableInfo")]
     public float sphereCastRadius = 0.5f;
-    public int interactableLayerIndex;
     private Vector3 raycastPos;
     public GameObject lookObject;
     private PhysicsObject physicsObject;
     private Camera mainCamera;
  
     [Header("Pickup")]
-    [SerializeField] private Transform pickupParent;
+    public Transform pickupParent;
     public GameObject currentlyPickedUpObject;
     private Rigidbody pickupRB;
  
@@ -46,6 +46,8 @@ public class FirstPersonMovement : MonoBehaviour
     [Header("Rotation")]
     public float rotationSpeed = 100f;
     Quaternion lookRot;
+
+    [Header("UI")] public Image crosshair;
 
     void Start()
     {
@@ -62,14 +64,13 @@ public class FirstPersonMovement : MonoBehaviour
         RaycastHit hit;
         if (Physics.SphereCast(raycastPos, sphereCastRadius, mainCamera.transform.forward, out hit, maxDistance, pickable))
         {
- 
+            crosshair.color = new Color(1f,1f,1f,.6f);
             lookObject = hit.collider.transform.root.gameObject;
- 
         }
         else
         {
             lookObject = null;
-            
+            crosshair.color = new Color(.5f,.5f,.5f,.6f);
         }
  
  
@@ -83,7 +84,6 @@ public class FirstPersonMovement : MonoBehaviour
                 //and we are looking an interactable object
                 if (lookObject != null)
                 {
- 
                     PickUpObject();
                 }
  
@@ -150,6 +150,7 @@ public class FirstPersonMovement : MonoBehaviour
     //Release the object
     public void BreakConnection()
     {
+        crosshair.enabled = true;
         pickupRB.useGravity = true;
         pickupRB.constraints = RigidbodyConstraints.None;
         currentlyPickedUpObject = null;
@@ -159,6 +160,7 @@ public class FirstPersonMovement : MonoBehaviour
  
     public void PickUpObject()
     {
+        crosshair.enabled = false;
         physicsObject = lookObject.GetComponentInChildren<PhysicsObject>();
         currentlyPickedUpObject = lookObject;
         pickupRB = currentlyPickedUpObject.GetComponent<Rigidbody>();
