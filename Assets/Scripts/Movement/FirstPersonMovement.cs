@@ -117,10 +117,20 @@ public class FirstPersonMovement : MonoBehaviour
 
         controller.Move(move * (speed * Time.deltaTime));
 
-        velocity.y -= gravity;
+        velocity.y -= gravity * Time.deltaTime;
 
-        controller.Move(velocity);
+        controller.Move(velocity * Time.deltaTime);
     }
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     isGrounded = true;
+    // }
+    //
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     isGrounded = false;
+    // }
 
     //Velocity movement toward pickup parent and rotation
     private void FixedUpdate()
