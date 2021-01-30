@@ -6,13 +6,15 @@ using UnityEngine.Playables;
 
 public class OpenDoor : MonoBehaviour
 {
-    public PlayableDirector pd;
-    public bool open = false;
-    private void OnTriggerEnter(Collider other)
+    public LevelManagerBase levelManager;
+    public GameObject door;
+
+
+    private void OnTriggerStay(Collider other)
     {
-        if (open)
+        if (door.transform.position.x > -1.67f)
         {
-            pd.Play();
+            levelManager.OpenDoor(door);
         }
     }
 }

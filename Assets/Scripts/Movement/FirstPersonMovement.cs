@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
 {
+    [HideInInspector]public GameManager gameManager;
     private CharacterController controller;
+    private Camera _camera;
 
     public float speed = 12f;
 
@@ -18,22 +21,83 @@ public class FirstPersonMovement : MonoBehaviour
     private bool isGrounded;
 
     public LayerMask pickable;
+
+    [Header("InteractableInfo")]
+    public float sphereCastRadius = 0.5f;
+    public int interactableLayerIndex;
+    private Vector3 raycastPos;
+    public GameObject lookObject;
+    private PhysicsObject physicsObject;
+    private Camera mainCamera;
+ 
+    [Header("Pickup")]
+    [SerializeField] private Transform pickupParent;
+    public GameObject currentlyPickedUpObject;
+    private Rigidbody pickupRB;
+ 
+    [Header("ObjectFollow")]
+    [SerializeField] private float minSpeed = 0;
+    [SerializeField] private float maxSpeed = 300f;
+    [SerializeField] private float maxDistance = 10f;
+    private float currentSpeed = 0f;
+    private float currentDist = 0f;
+    private Vector3 direction;
+ 
+    [Header("Rotation")]
+    public float rotationSpeed = 100f;
+    Quaternion lookRot;
+
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         controller = GetComponent<CharacterController>();
+        mainCamera = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit_button;
-
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit_button, 2f, pickable) && Input.GetKeyDown(KeyCode.E))
+        //Here we check if we're currently looking at an interactable object
+        raycastPos = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));       
+        RaycastHit hit;
+        if (Physics.SphereCast(raycastPos, sphereCastRadius, mainCamera.transform.forward, out hit, maxDistance, pickable))
         {
-            hit_button.transform.GetComponent<InteractableCube>().nOfE++;
+ 
+            lookObject = hit.collider.transform.root.gameObject;
+ 
         }
-
+        else
+        {
+            lookObject = null;
+            
+        }
+ 
+ 
+ 
+        //if we press the button of choice
+        if (Input.GetKeyDown(gameManager.interactKeyRight))
+        {
+            //and we're not holding anything
+            if (currentlyPickedUpObject == null)
+            {
+                //and we are looking an interactable object
+                if (lookObject != null)
+                {
+ 
+                    PickUpObject();
+                }
+ 
+            }
+            //if we press the pickup button and have something, we drop it
+            else 
+            {
+                BreakConnection();
+            }
+        }
+        
+        
+        
+        // movement
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -53,8 +117,53 @@ public class FirstPersonMovement : MonoBehaviour
 
         controller.Move(move * (speed * Time.deltaTime));
 
-        velocity.y -= gravity * Time.deltaTime;
+        velocity.y -= gravity;
 
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move(velocity);
+    }
+
+    //Velocity movement toward pickup parent and rotation
+    private void FixedUpdate()
+    {
+        if (currentlyPickedUpObject != null)
+        {
+            currentDist = Vector3.Distance(pickupParent.position, pickupRB.position);
+            currentSpeed = Mathf.SmoothStep(minSpeed, maxSpeed, currentDist / maxDistance);
+            currentSpeed *= Time.fixedDeltaTime;
+            direction = pickupParent.position - pickupRB.position;
+            if (currentDist < 0.1)
+            {
+                currentSpeed = 0f;
+                direction = Vector3.zero;
+            }
+
+            pickupRB.useGravity = false;
+            pickupRB.velocity = direction.normalized * currentSpeed;
+            //Rotation
+            lookRot = Quaternion.LookRotation(mainCamera.transform.position - pickupRB.position);
+            lookRot = Quaternion.Slerp(mainCamera.transform.rotation, lookRot, rotationSpeed * Time.fixedDeltaTime);
+            pickupRB.MoveRotation(lookRot);
+        }
+ 
+    }
+ 
+    //Release the object
+    public void BreakConnection()
+    {
+        pickupRB.useGravity = true;
+        pickupRB.constraints = RigidbodyConstraints.None;
+        currentlyPickedUpObject = null;
+        physicsObject.pickedUp = false;
+        currentDist = 0;
+    }
+ 
+    public void PickUpObject()
+    {
+        physicsObject = lookObject.GetComponentInChildren<PhysicsObject>();
+        currentlyPickedUpObject = lookObject;
+        pickupRB = currentlyPickedUpObject.GetComponent<Rigidbody>();
+        pickupRB.constraints = RigidbodyConstraints.FreezeRotation;
+        physicsObject.playerInteractions = this;
+        StartCoroutine(physicsObject.PickUp());
     }
 }

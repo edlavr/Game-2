@@ -5,18 +5,16 @@ using UnityEngine;
 
 public class GameButton : MonoBehaviour
 {
+    [HideInInspector]
     public GameManager _gameManager;
-    private Material _material;
     public bool active = false;
-    void Start()
+    void Awake()
     {
         _gameManager = GetComponent<GameManager>();
-        _material = GetComponent<MeshRenderer>().materials[1];
     }
 
     private void Update()
     {
-        _material.color = active ? Color.green : Color.red;
         if (active)
         {
             Debug.Log("button");

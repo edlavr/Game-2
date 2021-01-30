@@ -8,39 +8,39 @@ using TMPro;
 public class Interactable : MonoBehaviour
 {
     [HideInInspector]
-    public GameManager _gameManager;
+    public GameManager gameManager;
 
     private Collider playerCollider;
     
-    public float visibleRadius = 3;
+    // public float visibleRadius = 3;
     public float interactionRadius = 1.5f;
     private float distance;
 
     public bool isInteractable = true;
     private bool isOneInteraction;
 
-    public TextMeshProUGUI leftText;
-    public TextMeshProUGUI rightText;
+    // public TextMeshProUGUI leftText;
+    // public TextMeshProUGUI rightText;
 
-    public string leftAction;
+    // public string leftAction;
     public string rightAction;
 
-    private Camera _camera;
+    // private Camera _camera;
     private Quaternion cameraRotation;
-    private Transform _canvas;
-    private CanvasGroup _canvasGroup;
+    // private Transform _canvas;
+    // private CanvasGroup _canvasGroup;
 
     protected int i;
     protected virtual void Start()
     {
-        _gameManager = FindObjectOfType<GameManager>();
-        playerCollider = _gameManager._playerCollider;
+        gameManager = FindObjectOfType<GameManager>();
+        playerCollider = gameManager._playerCollider;
 
-        _camera = FindObjectOfType<Camera>();
-        _canvas = gameObject.transform.Find("Canvas");
+        // _camera = FindObjectOfType<Camera>();
+        // _canvas = gameObject.transform.Find("Canvas");
 
-        _canvasGroup = _canvas.GetComponent<CanvasGroup>();
-        _canvasGroup.alpha = 0;
+        // _canvasGroup = _canvas.GetComponent<CanvasGroup>();
+        // _canvasGroup.alpha = 0;
         
         
         if (rightAction == "")
@@ -48,7 +48,7 @@ public class Interactable : MonoBehaviour
             isOneInteraction = true;
         }
     }
-    private void Update()
+    public virtual void Update()
     {
         CheckDistance();
     }
@@ -58,10 +58,10 @@ public class Interactable : MonoBehaviour
         // 0 when just enters, 1 when the closest, negative when outside radius
         distance = Vector3.Distance(playerCollider.transform.position, transform.position);
         
-        if (distance < visibleRadius)
-        {
-            ChangeCanvas();
-        }
+        // if (distance < visibleRadius)
+        // {
+        //     ChangeCanvas();
+        // }
         
         if (distance < interactionRadius)
         {
@@ -69,35 +69,35 @@ public class Interactable : MonoBehaviour
             {
                 if (isOneInteraction)
                 {
-                    CanInteract(_gameManager.interactKeyLeft);
+                    CanInteract(gameManager.interactKeyLeft);
                 }
                 else
                 {
-                    CanInteract(_gameManager.interactKeyLeft, _gameManager.interactKeyRight);
+                    CanInteract(gameManager.interactKeyLeft, gameManager.interactKeyRight);
                 }
             }
         }
     }
 
-    private void ChangeCanvas()
-    {
-        _canvasGroup.alpha = 1 - distance / visibleRadius;
-        cameraRotation = _camera.transform.rotation;
-        _canvas.rotation = cameraRotation;
-        if (isInteractable)
-        {
-            leftText.text = _gameManager.interactKeyLeft + " to " + leftAction;
-            if (!isOneInteraction)
-            {
-                rightText.text = _gameManager.interactKeyRight + " to " + rightAction;
-            }
-        }
-        else
-        {
-            leftText.text = "";
-            rightText.text = "";
-        }
-    }
+    // private void ChangeCanvas()
+    // {
+    //     _canvasGroup.alpha = 1 - distance / visibleRadius;
+    //     cameraRotation = _camera.transform.rotation;
+    //     _canvas.rotation = cameraRotation;
+    //     if (isInteractable)
+    //     {
+    //         leftText.text = gameManager.interactKeyLeft + " to " + leftAction;
+    //         if (!isOneInteraction)
+    //         {
+    //             rightText.text = gameManager.interactKeyRight + " to " + rightAction;
+    //         }
+    //     }
+    //     else
+    //     {
+    //         leftText.text = "";
+    //         rightText.text = "";
+    //     }
+    // }
 
     private void CanInteract(KeyCode leftKey)
     {
