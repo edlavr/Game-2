@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class FirstPersonMovement : MonoBehaviour
 {
@@ -49,11 +50,15 @@ public class FirstPersonMovement : MonoBehaviour
 
     [Header("UI")] public Image crosshair;
 
+    private AudioSource _audio;
+    private Vector3 lastPosition;
+
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
         controller = GetComponent<CharacterController>();
         mainCamera = Camera.main;
+        _audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -103,11 +108,13 @@ public class FirstPersonMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+            _audio.mute = false;
         }
 
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * gravity);
+            _audio.mute = true;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -120,21 +127,22 @@ public class FirstPersonMovement : MonoBehaviour
         velocity.y -= gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        bool isMoving = Vector3.Distance(transform.position, lastPosition) > 0.1f;
+
+        if(isMoving && !_audio.isPlaying)
+        {
+            _audio.pitch = UnityEngine.Random.Range(0.6f, .7f);
+            _audio.volume = UnityEngine.Random.Range(0.4f, .5f);
+            _audio.Play();
+        }
+       
     }
-
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     isGrounded = true;
-    // }
-    //
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     isGrounded = false;
-    // }
-
-    //Velocity movement toward pickup parent and rotation
+    
     private void FixedUpdate()
     {
+        lastPosition = transform.position;
+        
         if (currentlyPickedUpObject != null)
         {
             currentDist = Vector3.Distance(pickupParent.position, pickupRB.position);

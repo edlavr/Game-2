@@ -15,6 +15,7 @@
             <e p="PickDrop.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
           </e>
+          <e p="LoadNextScene.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />

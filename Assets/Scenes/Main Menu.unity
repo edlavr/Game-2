@@ -3159,6 +3159,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 815778906}
+    - target: {fileID: 6061655872382488052, guid: d84639c151ee34c6b9484ca1d87ff597, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Test Chamber 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6061655872382488053, guid: d84639c151ee34c6b9484ca1d87ff597, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

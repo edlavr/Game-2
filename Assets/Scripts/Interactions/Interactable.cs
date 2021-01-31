@@ -69,11 +69,11 @@ public class Interactable : MonoBehaviour
             {
                 if (isOneInteraction)
                 {
-                    CanInteract(gameManager.interactKeyLeft);
+                    // CanInteract(gameManager.interactKeyLeft);
                 }
                 else
                 {
-                    CanInteract(gameManager.interactKeyLeft, gameManager.interactKeyRight);
+                    // CanInteract(gameManager.interactKeyLeft, gameManager.interactKeyRight);
                 }
             }
         }

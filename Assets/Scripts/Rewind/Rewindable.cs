@@ -77,10 +77,7 @@ public class Rewindable : MonoBehaviour
     
     public void Record()
     {
-        // c = CursorLockMode.Locked;
-        // Cursor.lockState = CursorLockMode.None;
-
-        if (_gameManager.isRewindable)
+        if (pointsInTime.Count == 0 || pointsInTime[0].position != transform.position)
         {
             pointsInTime.Insert(0, new PointInTime(transform.position, transform.rotation));
         }

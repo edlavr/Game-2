@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Test Chamber 1.unity
     guid: 8c35cd7ecc1bd44c6a73fe66818aae9c
   - enabled: 1
-    path: Assets/Scenes/Level Selector.unity
-    guid: 332db8b0406a24e3086b62f5ad37ed19
+    path: Assets/Scenes/Main Menu.unity
+    guid: 6cd06411b994844c1a43228ec575f028
   m_configObjects: {}

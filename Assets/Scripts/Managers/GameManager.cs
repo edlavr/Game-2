@@ -12,15 +12,13 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI notifications;
 
     public KeyCode rewindKey = KeyCode.R;
-    
-    public KeyCode interactKeyLeft = KeyCode.Q;
+    public KeyCode clearRewindKey = KeyCode.Q;
     public KeyCode interactKeyRight = KeyCode.E;
 
     public float mouseSensitivity = 150f;
     
     public bool isRecording = false;
     public bool isRewinding = false;
-    public bool isRewindable = true;
     public bool pickedUp = false;
 
     public static bool isPaused = false;
@@ -33,6 +31,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(rewindKey))
         {
             isRewinding = true;
+        }
+        
+        if (Input.GetKeyDown(clearRewindKey))
+        {
+            isRecording = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -68,6 +71,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
+    }
+    
+    public void LoadNextScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }

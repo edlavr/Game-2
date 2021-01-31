@@ -1,0 +1,605 @@
+fileFormatVersion: 2
+guid: 74eeeedb360654465aab051de1e202a1
+SketchUpImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_1008_06_51_prev
+    second: {fileID: 2800000, guid: a51b3d199baa9444e9a2d014293b1f50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_DSC02560
+    second: {fileID: 2800000, guid: 7736cf960176f4320b793b7b6a59a25b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_DSC02590
+    second: {fileID: 2800000, guid: 716608fcde2db4d11a6061b0509f56ab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_DSC02625
+    second: {fileID: 2800000, guid: 39c861b89856f4e3286ee805269631dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_DSC02634
+    second: {fileID: 2800000, guid: 5563c2cd9958842bca7ded28036c2abd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_GEI11DB
+    second: {fileID: 2800000, guid: f2b5aad199e944ca1aeed778cb4ac496, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_doorpost
+    second: {fileID: 2800000, guid: c265e2e9ae97d4395a504d6f876c5959, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_east south tower top(2)
+    second: {fileID: 2800000, guid: 73b574dee7f3142ee8b09450202bf2e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_gallilee-sidefront
+    second: {fileID: 2800000, guid: 484f427aa4e4e4e0c832bdd1c3119e66, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_house-window
+    second: {fileID: 2800000, guid: cbf9fe4c1558f419f8f540c649d30994, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_kitchen-front
+    second: {fileID: 2800000, guid: 94f754636367142d3ba59d4e63a00b02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_kitchensidea
+    second: {fileID: 2800000, guid: 35e5f1451961548c7a84cc2b9a5e5a8c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_kitchentopfront
+    second: {fileID: 2800000, guid: 277968237844a419d837ce9cc978bbd4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_library-wall
+    second: {fileID: 2800000, guid: 120741142f51149688380bd58dc5fb57, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_nine-alters
+    second: {fileID: 2800000, guid: b554752050a754999aadd8b8ae40819c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_ninealtersside
+    second: {fileID: 2800000, guid: d1ebcb78fda424e309b3462ffa8a549d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_ninealterssouth
+    second: {fileID: 2800000, guid: 99b3c5a180937465296385a5a3e1fddd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_ninealterstop
+    second: {fileID: 2800000, guid: f4a54294730b74fb3b0750f597ad1d7b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_north top_tint0x859175FF
+    second: {fileID: 2800000, guid: 1f0807b81ec194031b6b250e954fd57c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_north-face
+    second: {fileID: 2800000, guid: f287a646c63aa49bbbb1f20ff9b5870f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_northhousenorthalley
+    second: {fileID: 2800000, guid: beeb55812092e48ef8334ce1d7c1ff19, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_northtrans-northeast
+    second: {fileID: 2800000, guid: 0e509ab6f90af40b0a71b3809b4eb0be, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_northtransnorth
+    second: {fileID: 2800000, guid: 8af9fe70d209140ab961e00ead5dfe4d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_privvy
+    second: {fileID: 2800000, guid: 1f6ae74f76c784336a56d4eea069eed9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_roof rail_tint0x988D72FF
+    second: {fileID: 2800000, guid: 40a2607693a274bf49599f2f9fc71f0f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_stanchion
+    second: {fileID: 2800000, guid: ca0ae08bdb95b4971abe0c7eb039f000, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_stanchiontop
+    second: {fileID: 2800000, guid: 4a27a8f5b6bc740958ab65afc75b046a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_towerwest
+    second: {fileID: 2800000, guid: 765b1ff57422a48659e46d77757ddd68, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_towtopeast(1)
+    second: {fileID: 2800000, guid: 64e645409da5e4ede8c9f619d1483a2c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_GRAHAM~1_AppData_Local_Temp_wall3
+    second: {fileID: 2800000, guid: 8befc90279cc3486f9713fa72159a8f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_chester le
+        street_DSC02297copy
+    second: {fileID: 2800000, guid: 05da795827b0440f1933676c5d58bb74, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_chester le
+        street_main roof
+    second: {fileID: 2800000, guid: 48a0b7e21420445c29a09c960040bc4a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_chester le
+        street_north-trans
+    second: {fileID: 2800000, guid: a97eb5e56a33842a784d0dfc3ccb3df6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_chester le
+        street_steps
+    second: {fileID: 2800000, guid: a9b5370b083074aa2918b181e70e9329, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_CLOISTER-TOP
+    second: {fileID: 2800000, guid: 7c9a6199fdec9426fb543f0f86c10092, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02281-copy
+    second: {fileID: 2800000, guid: 7b6baad3ff6d74eac8aeea02c0ed107c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02305
+    second: {fileID: 2800000, guid: 35459934bfd1d46058558f012ba926b6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02561
+    second: {fileID: 2800000, guid: d280ced9e490d4d1890f97dd29b1cdae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02609
+    second: {fileID: 2800000, guid: 9a6d66085a077410fa7bb715a1af8554, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02617
+    second: {fileID: 2800000, guid: 0350a1d532c864f9681e7fa2be3330e6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02618
+    second: {fileID: 2800000, guid: 189a879a1521b4c179fc2e6da8ab7a58, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02619
+    second: {fileID: 2800000, guid: 11cdb3dee89744785a4ccaa4a22898a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02621
+    second: {fileID: 2800000, guid: 70b45fc7cb9a64a10b89cfee23645258, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02623
+    second: {fileID: 2800000, guid: f81c5a8f2b1b8476aa5b56e904df28d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_DSC02626
+    second: {fileID: 2800000, guid: 1a47ee8584a7b4200b4b5baac0c46084, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_GALLILEE-FRONT
+    second: {fileID: 2800000, guid: bdb595487b6d94ad6a790114c7e884b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_Main-top-rail
+    second: {fileID: 2800000, guid: d66056225ffba4e25a80d4654422b7e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_bay
+    second: {fileID: 2800000, guid: 17b851afb4ffa4629850aad0ff08615f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_castle
+    second: {fileID: 2800000, guid: 892a668cf42d648be9b51a380b7396f6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_cloister
+        topgrass
+    second: {fileID: 2800000, guid: 547f67da89ba94526931ef1493175539, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_door
+    second: {fileID: 2800000, guid: f312bb2e5f243445b8146d27772c5df4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_doorside
+    second: {fileID: 2800000, guid: fe896b132d1f1401e92cc1d1d54cf17f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_gal-slope
+    second: {fileID: 2800000, guid: 5ffd4474627454adb9467fe0077fccc1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_hex
+    second: {fileID: 2800000, guid: 2c768b101b5234e89867991493af0857, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_house-roof
+    second: {fileID: 2800000, guid: 667b89cf51e28477c97b6355e4fdce2b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_houseroof-small
+    second: {fileID: 2800000, guid: 60136500dd42d4ed8834581755d54df0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_kitchen-hexsidde
+    second: {fileID: 2800000, guid: 11a54e3fa417548838ecc96981b37a03, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_kitchencorner
+    second: {fileID: 2800000, guid: 0c85e321cb11746de87bb213d39e722c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_kitchentopslope
+    second: {fileID: 2800000, guid: 56e35bee505b34fab8f2737e5bc6f2b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_kitchenwest
+    second: {fileID: 2800000, guid: 58113be43372e486ea70bb541fcc5ba1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_kitroof
+    second: {fileID: 2800000, guid: cfb920bb94d554df0a10ceee52dca549, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_maintower-buttress
+    second: {fileID: 2800000, guid: e087c36eb1ad240aab8cffed3f4df3ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_maintower-buttressside
+    second: {fileID: 2800000, guid: 1111bf3413687420b9699cae7118a8ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_north-house-south
+    second: {fileID: 2800000, guid: af152c9528e11497380e296f8620ec9c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_north-house-wall
+    second: {fileID: 2800000, guid: 388ce51580ce147a2adeaecbd83d3a43, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_north-houseend
+    second: {fileID: 2800000, guid: e49e4e33d9a5243d2bc02068100b1c97, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_north-trans-tower-wall
+    second: {fileID: 2800000, guid: 01e5c321ec6514419a3ed8cc62dc8fdb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_northhouse
+    second: {fileID: 2800000, guid: 53bb5d3dfe435494fb878b03aea23bb9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_northhouse-front-porch
+    second: {fileID: 2800000, guid: 3d52fd50d123748b199edca029f750a5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_northhousealley
+    second: {fileID: 2800000, guid: e07d5f05208e5441aa618a8d2b0627d1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_northhousesouth
+    second: {fileID: 2800000, guid: 1ba27ac5f53404a6cb248e896ad058e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_northhousesouthfront2
+    second: {fileID: 2800000, guid: 4eec27bc552ef4d9291e60fb4cd42efe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_northtranseast
+    second: {fileID: 2800000, guid: b3e6db207046148de94ddfc6834c0517, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_northwall
+    second: {fileID: 2800000, guid: 2b1eee4e11b29499f82278ba68e5db1c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_privvy2
+    second: {fileID: 2800000, guid: 4a6f44cab1b764029b3930735dc71aec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_skyview
+    second: {fileID: 2800000, guid: f00caa93e269c4270b8cd1e5b430045c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_slopkitchen
+    second: {fileID: 2800000, guid: 1d193868773fd48028c12f82c492a63a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_top
+    second: {fileID: 2800000, guid: 4459f41f0407b48daac916bac92a0313, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_tower-rail
+    second: {fileID: 2800000, guid: 940aa780572d646078f14354164d115f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_towertop
+    second: {fileID: 2800000, guid: e00efff84024a48fd886a04bd0dbb96e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_wall2
+    second: {fileID: 2800000, guid: 07909be27a33b4d1992f2f2e4f284de7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_wall4
+    second: {fileID: 2800000, guid: 236d4392096dc4d9682bb4b939ee0456, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_walla
+    second: {fileID: 2800000, guid: 00e5ae3c11af94fd3bff1ea1aa34e241, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_wallb
+    second: {fileID: 2800000, guid: f7f9450fa72e147b285156789a95c235, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_wallcentrance
+    second: {fileID: 2800000, guid: 9c14635575e4b4aa99d2acf29140b9bc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_walld
+    second: {fileID: 2800000, guid: f301f7255e0e7429eab90b3a6099a1a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_walle
+    second: {fileID: 2800000, guid: e2bbde423a6f64505bbac0a4bbc8928a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_wallh
+    second: {fileID: 2800000, guid: b495db52400ae4d28b7367bc8a51928f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_TEXTURE_wallj
+    second: {fileID: 2800000, guid: 1896c3351ca3c4a0e92aed6aa7ff0ecf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_cloist-top
+    second: {fileID: 2800000, guid: 24e1eed747f1946bba1d508fc949234a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_cloister
+    second: {fileID: 2800000, guid: 7fdbf4c4c1fd741a98557eeab83694d9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_door
+        top
+    second: {fileID: 2800000, guid: 5ea0ef6058d82449f95ff973f9f09d8b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_maintower(1)
+    second: {fileID: 2800000, guid: 76e4be5cc8c3d4e4fa232e4da4198fd4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_stanchion
+        top
+    second: {fileID: 2800000, guid: 9be8bc873826942a4885938a0be363f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_towertop_tint0xA59778FF
+    second: {fileID: 2800000, guid: 04019e4ccb6fc4b029a251c86a3b30a0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: C__Users_Graham & Kimbers_Documents_Grahams Gear_Googlearth_durham caT_towertoprailhex
+    second: {fileID: 2800000, guid: 6420a847391c14f5888891c8e27fa54f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roofing_Metal_Standing_Seam_Red_tint0xDDE8D0FF
+    second: {fileID: 2800000, guid: 02ac8b94648354b73bd83d5bb5aa5ff3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roofing_Shingles_GAF_Estates_tint0x998577FF
+    second: {fileID: 2800000, guid: 9bf453f0942434333bdfabee6756f024, type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.0254
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  generateBackFace: 1
+  mergeCoplanarFaces: 0
+  selectedNodes: 00000000010000000200000003000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d1000000d2000000d3000000d4000000d5000000d6000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ef000000f0000000f1000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000000100000101000002010000030100000401000005010000060100000701000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f010000200100002101000022010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f010000300100003101000032010000330100003401000035010000360100003701000038010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f010000500100005101000052010000530100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f010000600100006101000062010000630100006401000065010000660100006701000068010000690100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f010000800100008101000082010000830100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a8010000a9010000aa010000ab010000ac010000ad010000ae010000af010000b0010000b1010000b2010000b3010000b4010000b5010000b6010000b7010000b8010000b9010000ba010000bb010000bc010000bd010000be010000bf010000c0010000c1010000c2010000c3010000c4010000c5010000c6010000c7010000c8010000c9010000ca010000cb010000cc010000cd010000ce010000cf010000d0010000d1010000d2010000d3010000d4010000d5010000d6010000d7010000d8010000d9010000da010000db010000dc010000dd010000de010000df010000e0010000e1010000e2010000e3010000e4010000e5010000e6010000e7010000e8010000e9010000ea010000eb010000ec010000ed010000ee010000ef010000f0010000f1010000f2010000f3010000f4010000f5010000f6010000f7010000f8010000f9010000fa010000fb010000fc010000fd010000fe010000ff010000000200000102000002020000030200000402000005020000060200000702000008020000090200000a0200000b0200000c0200000d0200000e0200000f020000100200001102000012020000130200001402000015020000160200001702000018020000190200001a0200001b0200001c0200001d0200001e0200001f020000200200002102000022020000230200002402000025020000260200002702000028020000290200002a0200002b0200002c0200002d0200002e0200002f020000300200003102000032020000330200003402000035020000360200003702000038020000390200003a0200003b0200003c0200003d0200003e0200003f020000400200004102000042020000430200004402000045020000460200004702000048020000490200004a0200004b0200004c0200004d0200004e0200004f0200005002000051020000
+  assetHash:
+    serializedVersion: 2
+    Hash: f0fb699ec2550bc3125fe7516662ec64
+  fileUnit: 0
