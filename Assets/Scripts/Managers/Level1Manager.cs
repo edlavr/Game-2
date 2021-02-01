@@ -6,49 +6,60 @@ using UnityEngine;
 
 public class Level1Manager : LevelManagerBase
 {
-   public GameObject door;
-   public GameButton button;
+   public GameObject[] door;
+   public GameButton[] button;
    public GameObject[] paths;
-   private float doorX;
-   private Material buttonMaterial;
-   private Material doorMaterial;
+   // private float doorX;
+   private Material[] buttonMaterial = new Material[4];
+   private Material[] doorMaterial = new Material[4];
    private List<Material> pathsMaterial = new List<Material>();
    
-   private Vector3 doorPos;
+   private Vector3[] doorPos = new Vector3[4];
 
    private void Start()
    {
-      doorPos = door.transform.position;
+      for (int i = 0; i < door.Length; i++)
+      {
+         doorPos[i] = door[i].transform.position;
+         
+         buttonMaterial[i] = Instantiate(button[i].GetComponent<MeshRenderer>().material);
+         doorMaterial[i] = Instantiate(door[i].GetComponent<MeshRenderer>().material);
+         
+         button[i].GetComponent<MeshRenderer>().materials[1] = buttonMaterial[i];
+         door[i].GetComponent<MeshRenderer>().materials[0] = doorMaterial[i];
+         
+         buttonMaterial[i] = button[i].GetComponent<MeshRenderer>().materials[1];
+         doorMaterial[i] = door[i].GetComponent<MeshRenderer>().materials[0];
 
-      buttonMaterial = Instantiate(button.GetComponent<MeshRenderer>().material);
-      doorMaterial = Instantiate(door.GetComponent<MeshRenderer>().material);
+      }
       
-      button.GetComponent<MeshRenderer>().materials[1] = buttonMaterial;
-      door.GetComponent<MeshRenderer>().materials[0] = doorMaterial;
       for (int i = 0; i < paths.Length; i++)
       {
          pathsMaterial.Add(paths[i].GetComponent<MeshRenderer>().materials[2]);
          paths[i].GetComponent<MeshRenderer>().materials[2] = pathsMaterial[i];
       }
-      
-      buttonMaterial = button.GetComponent<MeshRenderer>().materials[1];
-      doorMaterial = door.GetComponent<MeshRenderer>().materials[0];
    }
 
    private void Update()
    {
 
-      Illuminate(button, buttonMaterial, button.active);
-      Illuminate(door, doorMaterial, button.active);
-      Illuminate(paths, pathsMaterial, button.active);
-      if (button.active)
+      for (int i = 0; i < door.Length; i++)
       {
-         OpenDoor(door, doorPos);
+         Illuminate(button[i], buttonMaterial[i], button[i].active);
+         Illuminate(door[i], doorMaterial[i], button[i].active);
+         
+         if (button[i].active)
+         {
+            OpenDoor(door[i], doorPos[i]);
+         }
+         else
+         {
+            CloseDoor(door[i], doorPos[i]);
+         }
       }
-      else
-      {
-         CloseDoor(door, doorPos);
-      }
+      
+      Illuminate(paths, pathsMaterial, button[2].active);
+
 
    }
 

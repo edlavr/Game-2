@@ -28,6 +28,7 @@
             <e p="GameManager.cs" t="Include" />
             <e p="Level1Manager.cs" t="Include" />
             <e p="Level2Manager.cs" t="Include" />
+            <e p="Level3Manager.cs" t="Include" />
             <e p="LevelManagerBase.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">

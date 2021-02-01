@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
         
         if (Input.GetKeyDown(clearRewindKey))
         {
+            if (isRecording)
+            {
+                _playerCollider.GetComponent<FirstPersonMovement>().BreakConnection();
+            }
             isRecording = false;
         }
 

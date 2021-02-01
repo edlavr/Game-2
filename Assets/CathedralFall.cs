@@ -65,7 +65,7 @@ public class CathedralFall : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
             canvasEndGamePanel.GetComponent<CanvasGroup>().alpha += 0.02f;
         }
-
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

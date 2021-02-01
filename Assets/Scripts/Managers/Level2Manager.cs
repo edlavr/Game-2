@@ -104,10 +104,5 @@ public class Level2Manager : LevelManagerBase
       _audioSource.Play();
 
    }
-
-   public IEnumerator Exit()
-   {
-      yield return new WaitForSeconds(1);
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-   }
+   
 }

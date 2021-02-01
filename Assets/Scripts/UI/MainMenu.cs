@@ -8,9 +8,9 @@ public class MainMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     
-    public void SelectLevel(string levelname)
+    public void SelectLevel(int level)
     {
-        SceneManager.LoadScene(levelname);
+        SceneManager.LoadScene(level);
     }
 
     public void QuitGame()
