@@ -1,24 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.IMGUI.Controls;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class LevelManagerBase : MonoBehaviour
 {
-    public void OpenDoor(GameObject dr)
+    public void OpenDoor(GameObject dr, Vector3 ogDoorPos, bool isAxisX=true)
     {
         Vector3 doorPos = dr.transform.position;
-        if (doorPos.x > -1.67f)
+        if (isAxisX)
         {
-            dr.transform.position = doorPos + Vector3.left * 0.03f;
+            if (doorPos.x - ogDoorPos.x > -1.9f)
+            {
+                dr.transform.position = doorPos + Vector3.left * 0.03f;
+            }
         }
+        else
+        {
+            if (ogDoorPos.z - doorPos.z > -1.9f)
+            {
+                dr.transform.position = doorPos + Vector3.forward * 0.03f;
+            }
+        }
+        
     }
 
-    public void CloseDoor(GameObject dr)
+    public void CloseDoor(GameObject dr, Vector3 ogDoorPos, bool isAxisX=true)
     {
         Vector3 doorPos = dr.transform.position;
-        if (doorPos.x < 0.33f)
+
+        if (isAxisX)
         {
-            dr.transform.position = doorPos + Vector3.right * 0.03f;
+            if (doorPos.x - ogDoorPos.x < 0f)
+            {
+                dr.transform.position = doorPos + Vector3.right * 0.03f;
+            }
+        }
+        else
+        {
+            if (ogDoorPos.z - doorPos.z < 0f)
+            {
+                dr.transform.position = doorPos + Vector3.back * 0.03f;
+            }
         }
     }
 

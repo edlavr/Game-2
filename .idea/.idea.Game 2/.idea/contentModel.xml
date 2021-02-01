@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="3rd Party Assets" t="Include">
+          <e p="Volumetric Lights" t="Include">
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+        </e>
+        <e p="CathedralFall.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Interactions" t="Include">
+            <e p="Exit.cs" t="Include" />
             <e p="GameButton.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="InteractableCube.cs" t="Include" />
@@ -15,11 +24,10 @@
             <e p="PickDrop.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
           </e>
-          <e p="LoadNextScene.cs" t="Include" />
-          <e p="MainMenu.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="Level1Manager.cs" t="Include" />
+            <e p="Level2Manager.cs" t="Include" />
             <e p="LevelManagerBase.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
@@ -33,10 +41,25 @@
             <e p="RewindablePlayer.cs" t="Include" />
           </e>
           <e p="Room" t="Include">
+            <e p="LoadNextScene.cs" t="Include" />
             <e p="OpenDoor.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="MainMenu.cs" t="Include" />
             <e p="Notification.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Standard Assets" t="Include">
+          <e p="Effects" t="Include">
+            <e p="ImageEffects" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="PostEffectsBase.cs" t="Include" />
+                <e p="Tonemapping.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Tonemapper.shader" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
@@ -68,6 +91,22 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Volumetric Lights" t="Include">
+          <e p="Editor" t="Include">
+            <e p="ImageEffects" t="Include">
+              <e p="TonemappingEditor.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="VolumetricLight.cs" t="Include" />
+            <e p="VolumetricLightRenderer.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="BilateralBlur.shader" t="Include" />
+            <e p="BlitAdd.shader" t="Include" />
+            <e p="VolumetricLight.shader" t="Include" />
           </e>
         </e>
       </e>

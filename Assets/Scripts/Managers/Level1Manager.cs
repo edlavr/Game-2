@@ -13,9 +13,13 @@ public class Level1Manager : LevelManagerBase
    private Material buttonMaterial;
    private Material doorMaterial;
    private List<Material> pathsMaterial = new List<Material>();
+   
+   private Vector3 doorPos;
 
    private void Start()
    {
+      doorPos = door.transform.position;
+
       buttonMaterial = Instantiate(button.GetComponent<MeshRenderer>().material);
       doorMaterial = Instantiate(door.GetComponent<MeshRenderer>().material);
       
@@ -39,11 +43,11 @@ public class Level1Manager : LevelManagerBase
       Illuminate(paths, pathsMaterial, button.active);
       if (button.active)
       {
-         OpenDoor(door);
+         OpenDoor(door, doorPos);
       }
       else
       {
-         CloseDoor(door);
+         CloseDoor(door, doorPos);
       }
 
    }
