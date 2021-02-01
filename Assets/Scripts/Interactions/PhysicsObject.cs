@@ -19,7 +19,6 @@ public class PhysicsObject : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         _color = GetComponent<MeshRenderer>();
         isRewindable = GetComponent<Rewindable>();
-        Debug.Log(isRewindable);
     }
 
     private void Update()

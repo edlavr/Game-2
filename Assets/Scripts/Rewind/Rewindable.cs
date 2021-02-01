@@ -11,6 +11,7 @@ public class Rewindable : MonoBehaviour
     public List<PointInTime> pointsInTime;
     private Rigidbody rb;
     private bool _isrbNotNull;
+    private bool count = true;
 
     public virtual void Start()
     {
@@ -48,7 +49,7 @@ public class Rewindable : MonoBehaviour
 
     public void StopRewind()
     {
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         _gameManager.isRewinding = false;
         _gameManager.isRecording = false;
     }
@@ -62,7 +63,7 @@ public class Rewindable : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
             }
-            Time.timeScale = 2f;
+            // Time.timeScale = 2f;
             PointInTime pointInTime = pointsInTime[0];
             transform.position = pointInTime.position;
             transform.rotation = pointInTime.rotation;
@@ -77,9 +78,18 @@ public class Rewindable : MonoBehaviour
     
     public void Record()
     {
-        if (pointsInTime.Count == 0 || pointsInTime[0].position != transform.position)
+        // if (pointsInTime.Count == 0 || pointsInTime[0].position != transform.position)
+        // {
+            // pointsInTime.Insert(0, new PointInTime(transform.position, transform.rotation));
+        // }
+        if (count)
         {
             pointsInTime.Insert(0, new PointInTime(transform.position, transform.rotation));
+            count = false;
+        }
+        else
+        {
+            count = true;
         }
     }
     

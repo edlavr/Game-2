@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(rewindKey))
         {
+            if (_playerCollider.GetComponent<FirstPersonMovement>().currentlyPickedUpObject != null && _playerCollider.GetComponent<FirstPersonMovement>().currentlyPickedUpObject.GetComponent<Rewindable>() != null)
+            {
+                _playerCollider.GetComponent<FirstPersonMovement>().BreakConnection();
+            }
             isRewinding = true;
         }
         
