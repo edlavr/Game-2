@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Chamber 4.unity
     guid: fc8a1b20ac93142b0b15ae256ccebf06
+  - enabled: 1
+    path: Assets/Scenes/Test Chamber Final.unity
+    guid: edfc3c166361d43c3884118dce920fd7
   m_configObjects: {}

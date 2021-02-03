@@ -78,6 +78,8 @@
      <Compile Include="Assets\CanvasScript.cs" />
      <Compile Include="Assets\Scripts\UI\Notification.cs" />
      <Compile Include="Assets\Scripts\Rewind\PointInTime.cs" />
+     <Compile Include="Assets\Cake.cs" />
+     <Compile Include="Assets\Level6Manager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Volumetric Lights\Shaders\VolumetricLight.shader" />

@@ -21,7 +21,7 @@ public class LoadNextScene : MonoBehaviour
         StartCoroutine(loadNextScene(timer));
     }
 
-    IEnumerator loadNextScene(float time)
+    public IEnumerator loadNextScene(float time)
     {
         yield return new WaitForSeconds(time);
         

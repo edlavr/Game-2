@@ -13,7 +13,6 @@ public class CathedralFall : MonoBehaviour
     public GameObject head;
     private GameObject _camera;
     private bool isFalling = false;
-    public Image canvasEndGamePanel;
 
     private void Start()
     {
@@ -59,14 +58,8 @@ public class CathedralFall : MonoBehaviour
         _camera.GetComponent<MouseLook>().enabled = false;
         player.GetComponent<FirstPersonMovement>().enabled = false;
         yield return new WaitForSeconds(1f);
-
-        while (canvasEndGamePanel.GetComponent<CanvasGroup>().alpha < 1)
-        {
-            yield return new WaitForSeconds(0.01f);
-            canvasEndGamePanel.GetComponent<CanvasGroup>().alpha += 0.02f;
-        }
         Time.timeScale = 1f;
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        StartCoroutine(GetComponent<LoadNextScene>().loadNextScene(3));
     }
 }

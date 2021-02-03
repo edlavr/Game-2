@@ -25,6 +25,7 @@ public class Level3Manager : LevelManagerBase
 
    private void Start()
    {
+      _audioSource = GetComponent<AudioSource>();
 
       for (int i = 0; i < door.Length; i++)
       {

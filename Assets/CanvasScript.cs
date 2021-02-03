@@ -1,52 +1,65 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Button = UnityEngine.UIElements.Button;
 
 public class CanvasScript : MonoBehaviour
 {
-    private CanvasGroup black;
-    private void Awake()
+    public bool isPaused = false;
+    public GameObject panel;
+
+    private void Start()
     {
-        DontDestroyOnLoad(gameObject);
-    }
-    void OnEnable()
-    {
-        // Debug.Log("OnEnable called");
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        black = GameObject.Find("Black").GetComponent<CanvasGroup>();
-    }
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.buildIndex < 3)
-        {
-            Image crosshair = GetComponentInChildren<Image>();
-            crosshair.enabled = false;
-        }
-        StartCoroutine(Appear());
+        panel.SetActive(false);
     }
 
-    public IEnumerator Appear()
+    private void Update()
     {
-        Debug.Log("Appear!");
-        black.alpha = 1;
-        while (black.alpha > 0)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            yield return new WaitForSeconds(0.01f);
-            black.alpha -= 0.02f;
+            if (isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
         }
     }
 
-    public void BackToMenu()
+
+    public void Resume()
     {
-        Debug.Log("pressed");
+        AudioListener.pause = false;
+        Cursor.visible = false;
+        panel.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    public void Pause()
+    {
+        AudioListener.pause = true;
+        Cursor.visible = true;
+        panel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void LoadMenu()
+    {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
-    
+
     public void Restart()
     {
-        Debug.Log("pressed");
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

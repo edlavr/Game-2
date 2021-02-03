@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class GameManager : MonoBehaviour
@@ -18,10 +19,7 @@ public class GameManager : MonoBehaviour
     public bool isRecording = false;
     public bool isRewinding = false;
     public bool pickedUp = false;
-
-    public static bool isPaused = false;
-    public GameObject pauseMenuUI;
-
+    
     public float mouseSensitivity;
 
     private void Awake()
@@ -38,11 +36,8 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("OnSceneLoaded: " + scene.buildIndex);
-
-        pauseMenuUI.SetActive(false);
-        
         _playerCollider = GameObject.Find("Player First Person").GetComponent<CharacterController>();
-
+        isRecording = false;
     }
 
 
@@ -65,43 +60,5 @@ public class GameManager : MonoBehaviour
             }
             isRecording = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
-        {
-            if (isPaused)
-            {
-                AudioListener.pause = false;
-                Cursor.visible = false;
-                Resume();
-            }
-            else
-            {
-                AudioListener.pause = true;
-                Cursor.visible = true;
-                Pause();
-            }
-        }
     }
-
-    public void Resume()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
-    }
-
-    public void Pause()
-    {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
-    }
-
-    public void LoadMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Main Menu");
-    }
-
-
 }

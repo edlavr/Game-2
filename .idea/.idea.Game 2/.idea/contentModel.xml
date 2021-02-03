@@ -11,8 +11,10 @@
             <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
+        <e p="Cake.cs" t="Include" />
         <e p="CanvasScript.cs" t="Include" />
         <e p="CathedralFall.cs" t="Include" />
+        <e p="Level6Manager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Interactions" t="Include">
             <e p="GameButton.cs" t="Include" />

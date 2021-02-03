@@ -29,6 +29,7 @@ public class Level5Manager : LevelManagerBase
 
    private void Start()
    {
+      _audioSource = GetComponent<AudioSource>();
 
       for (int i = 0; i < door.Length; i++)
       {
@@ -122,7 +123,7 @@ public class Level5Manager : LevelManagerBase
       yield return new WaitForSeconds(1f);
       for (int i = 0; i < voices.Length; i++)
       {
-         yield return new WaitForSeconds(5f);
+         yield return new WaitForSeconds(10f);
          _audioSource.clip = voices[i];
          _audioSource.Play();
          yield return new WaitForSeconds(voices[i].length);
