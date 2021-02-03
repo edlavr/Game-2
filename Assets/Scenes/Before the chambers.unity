@@ -1547,7 +1547,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-587962
+  m_Name: pb_Mesh-306386
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9460,6 +9460,14 @@ PrefabInstance:
     - target: {fileID: 8820204691986694740, guid: 41658ce13ecf2477daee9323fbafc6b0, type: 3}
       propertyPath: crosshair
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820204691986694740, guid: 41658ce13ecf2477daee9323fbafc6b0, type: 3}
+      propertyPath: minSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820204691986694740, guid: 41658ce13ecf2477daee9323fbafc6b0, type: 3}
+      propertyPath: maxSpeed
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41658ce13ecf2477daee9323fbafc6b0, type: 3}
@@ -18672,6 +18680,8 @@ GameObject:
   - component: {fileID: 2019540463}
   - component: {fileID: 2019540464}
   - component: {fileID: 2019540466}
+  - component: {fileID: 2019540467}
+  - component: {fileID: 2019540468}
   m_Layer: 8
   m_Name: Radio
   m_TagString: Untagged
@@ -18861,6 +18871,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2019540467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019540461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fc4f35b2bc34885be23a2d6b157f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  waitOnPickup: 0.2
+  breakForce: 35
+  pickedUp: 0
+  playerInteractions: {fileID: 0}
+--- !u!64 &2019540468
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019540461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &2020628904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20019,6 +20060,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 117177521}
+    - target: {fileID: 5070885652303032924, guid: 1a5f1fe55cb7741418ef1f1edf8c2897, type: 3}
+      propertyPath: timer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5f1fe55cb7741418ef1f1edf8c2897, type: 3}
 --- !u!1 &6115547165900450989
@@ -20033,7 +20078,9 @@ GameObject:
   - component: {fileID: 52769597472748671}
   - component: {fileID: 2987577793644865426}
   - component: {fileID: 6115547165900450990}
-  m_Layer: 0
+  - component: {fileID: 6115547165900450992}
+  - component: {fileID: 6115547165900450991}
+  m_Layer: 8
   m_Name: pCylinder225
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20053,6 +20100,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39795738, y: 0.52256715, z: 0.42265075}
   m_Center: {x: -0.00000011920929, y: 0, z: 0}
+--- !u!114 &6115547165900450991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115547165900450989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fc4f35b2bc34885be23a2d6b157f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  waitOnPickup: 0.2
+  breakForce: 35
+  pickedUp: 0
+  playerInteractions: {fileID: 0}
+--- !u!114 &6115547165900450992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115547165900450989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc9c53bbf95e64078b40314a5ceeeff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dest: {fileID: 1677001819}
+  pickedUp: 0
+  nOfE: 0
 --- !u!1 &7847116173992351450
 GameObject:
   m_ObjectHideFlags: 0

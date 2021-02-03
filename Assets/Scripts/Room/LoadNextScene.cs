@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class LoadNextScene : MonoBehaviour
 {
     public CanvasGroup black;
+    public float timer = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +18,12 @@ public class LoadNextScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(loadNextScene());
+        StartCoroutine(loadNextScene(timer));
     }
 
-    IEnumerator loadNextScene()
+    IEnumerator loadNextScene(float time)
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(time);
         
         while (black.alpha < 1)
         {

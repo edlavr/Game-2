@@ -62,7 +62,7 @@ public class CathedralFall : MonoBehaviour
 
         while (canvasEndGamePanel.GetComponent<CanvasGroup>().alpha < 1)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
             canvasEndGamePanel.GetComponent<CanvasGroup>().alpha += 0.02f;
         }
         Time.timeScale = 1f;

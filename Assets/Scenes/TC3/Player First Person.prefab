@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfed98d4385224cf794e6adce97d5575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanvasPrefab: {fileID: 9083588809848143735, guid: 2659a9b276346403b8dc5304efc6420a, type: 3}
   gameManager: {fileID: 0}
   speed: 6
   gravity: 9.81
@@ -136,8 +137,8 @@ MonoBehaviour:
   lookObject: {fileID: 0}
   pickupParent: {fileID: 1867252976954697240}
   currentlyPickedUpObject: {fileID: 0}
-  minSpeed: 300
-  maxSpeed: 400
+  minSpeed: 400
+  maxSpeed: 500
   maxDistance: 3
   rotationSpeed: 500
 --- !u!82 &61520116231153732

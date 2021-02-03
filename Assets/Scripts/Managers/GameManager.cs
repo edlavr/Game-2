@@ -38,13 +38,13 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("OnSceneLoaded: " + scene.buildIndex);
-        if (scene.buildIndex == 1)
-        {
-            pauseMenuUI = GameObject.Find("Pause Menu");
-            pauseMenuUI.SetActive(false);
-        }
+
+        pauseMenuUI.SetActive(false);
+        
         _playerCollider = GameObject.Find("Player First Person").GetComponent<CharacterController>();
+
     }
+
 
     void Update()
     {
@@ -66,15 +66,17 @@ public class GameManager : MonoBehaviour
             isRecording = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
         {
             if (isPaused)
             {
-                Cursor.visible = true;
+                AudioListener.pause = false;
+                Cursor.visible = false;
                 Resume();
             }
             else
             {
+                AudioListener.pause = true;
                 Cursor.visible = true;
                 Pause();
             }
@@ -100,11 +102,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
     }
-    
-    public void LoadNextScene()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+
 
 }

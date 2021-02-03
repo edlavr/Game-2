@@ -51,7 +51,10 @@ public class GameButton : MonoBehaviour
         if (!played)
         {
             played = true;
-            _audio.Play();
+            if (_audio != null)
+            {
+                _audio.Play();
+            }
         }
     }
 

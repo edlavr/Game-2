@@ -2608,6 +2608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1e753c6687c4bd8a4ff160ddeb9237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocityZ: 0
+  velocityX: 0
   acceleration: 2
   deceleration: 2
   maxWalkVelocity: 0.5
@@ -2656,6 +2658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfed98d4385224cf794e6adce97d5575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanvasPrefab: {fileID: 9083588809848143735, guid: 2659a9b276346403b8dc5304efc6420a, type: 3}
   gameManager: {fileID: 0}
   speed: 6
   gravity: 9.81
@@ -2676,7 +2679,6 @@ MonoBehaviour:
   maxSpeed: 400
   maxDistance: 3
   rotationSpeed: 500
-  crosshair: {fileID: 0}
 --- !u!82 &8649416626193335575
 AudioSource:
   m_ObjectHideFlags: 0

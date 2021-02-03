@@ -18,6 +18,12 @@ public class Level4Manager : LevelManagerBase
    private List<Material> pathMaterialR = new List<Material>();
    
    private Vector3[] doorPos = new Vector3[8];
+   
+   
+   private bool isLineSaid = false;
+   private AudioSource _audioSource;
+   public AudioClip buttonLine;
+   public AudioClip[] voiceLines;
 
    private void Start()
    {
@@ -54,6 +60,9 @@ public class Level4Manager : LevelManagerBase
          pathMaterial1.Add(path1[i].GetComponent<MeshRenderer>().materials[2]);
          path1[i].GetComponent<MeshRenderer>().materials[2] = pathMaterial1[i];
       }
+      
+      StartCoroutine(VoiceLines(voiceLines));
+
    }
 
    private void Update()
@@ -70,6 +79,15 @@ public class Level4Manager : LevelManagerBase
          if (button[i].active)
          {
             OpenDoor(door[i], doorPos[i], i == 1);
+            if (i == 7)
+            {
+               if (!isLineSaid)
+               {
+                  isLineSaid = true;
+                  _audioSource.clip = buttonLine;
+                  _audioSource.Play();
+               }
+            }
          }
          else
          {
@@ -83,4 +101,18 @@ public class Level4Manager : LevelManagerBase
       }
    }
    
+   public IEnumerator VoiceLines(AudioClip[] voices)
+   {
+      yield return new WaitForSeconds(1f);
+      for (int i = 0; i < voices.Length; i++)
+      {
+         yield return new WaitForSeconds(10f);
+         _audioSource.clip = voices[i];
+         _audioSource.Play();
+         yield return new WaitForSeconds(voices[i].length);
+      }
+
+      yield return new WaitForSeconds(0.3f);
+
+   }
 }

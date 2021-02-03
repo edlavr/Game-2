@@ -17,9 +17,15 @@ public class Level1aManager : LevelManagerBase
    
    private Vector3[] doorPos = new Vector3[5];
 
+
+   private bool isLineSaid = false;
+   private AudioSource _audioSource;
+   public AudioClip buttonLine;
+   public AudioClip[] voiceLines;
+
    private void Start()
    {
-
+      _audioSource = GetComponent<AudioSource>();
       for (int i = 0; i < door.Length; i++)
       {
          doorPos[i] = door[i].transform.position;
@@ -46,6 +52,9 @@ public class Level1aManager : LevelManagerBase
          pathMaterialR.Add(pathR[i].GetComponent<MeshRenderer>().materials[2]);
          pathR[i].GetComponent<MeshRenderer>().materials[2] = pathMaterialR[i];
       }
+      
+      StartCoroutine(VoiceLines(voiceLines));
+
    }
 
    private void Update()
@@ -59,6 +68,15 @@ public class Level1aManager : LevelManagerBase
          if (button[i].active)
          {
             OpenDoor(door[i], doorPos[i], i != 2);
+            if (i == 2)
+            {
+               if (!isLineSaid)
+               {
+                  isLineSaid = true;
+                  _audioSource.clip = buttonLine;
+                  _audioSource.Play();
+               }
+            }
          }
          else
          {
@@ -69,6 +87,23 @@ public class Level1aManager : LevelManagerBase
          Illuminate(pathR, pathMaterialR, button[2].active);
 
       }
+   }
+   
+   
+   
+   public IEnumerator VoiceLines(AudioClip[] voices)
+   {
+      yield return new WaitForSeconds(1f);
+      for (int i = 0; i < voices.Length; i++)
+      {
+         yield return new WaitForSeconds(1);
+         _audioSource.clip = voices[i];
+         _audioSource.Play();
+         yield return new WaitForSeconds(voices[i].length);
+      }
+
+      yield return new WaitForSeconds(0.3f);
+
    }
    
 }

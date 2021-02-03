@@ -20,6 +20,12 @@ public class Level5Manager : LevelManagerBase
    private List<Material> pathMaterialS = new List<Material>();
    
    private Vector3[] doorPos = new Vector3[5];
+   
+    
+   private bool isLineSaid = false;
+   private AudioSource _audioSource;
+   public AudioClip buttonLine;
+   public AudioClip[] voiceLines;
 
    private void Start()
    {
@@ -62,12 +68,15 @@ public class Level5Manager : LevelManagerBase
          pathMaterialS.Add(pathS[i].GetComponent<MeshRenderer>().materials[2]);
          pathS[i].GetComponent<MeshRenderer>().materials[2] = pathMaterialS[i];
       }
+      
+      StartCoroutine(VoiceLines(voiceLines));
+
    }
 
    private void Update()
    {
 
-      for (int i = 0; i < door.Length; i++)
+      for (int i = 0; i < door.Length - 2; i++)
       {
          Illuminate(button[i], buttonMaterial[i], button[i].active);
          Illuminate(door[i], doorMaterial[i], button[i].active);
@@ -83,10 +92,44 @@ public class Level5Manager : LevelManagerBase
          
          Illuminate(path1, pathMaterial1, button[1].active);
          Illuminate(pathS, pathMaterialS, button[2].active);
-         Illuminate(pathL, pathMaterialL, button[3].active);
-         Illuminate(pathR, pathMaterialR, button[4].active);
 
       }
+      
+      if (button[3].active && button[4].active)
+      {
+         OpenDoor(door[3], doorPos[3]);
+         if (!isLineSaid)
+         {
+            isLineSaid = true;
+            _audioSource.clip = buttonLine;
+            _audioSource.Play();
+         }
+      }
+      else
+      {
+         CloseDoor(door[3], doorPos[3]);
+      }
+      
+      Illuminate(button[3], buttonMaterial[3], button[3].active);
+      Illuminate(button[4], buttonMaterial[4], button[4].active);
+      Illuminate(door[3], doorMaterial[3], button[3].active && button[4].active);
+      Illuminate(pathL, pathMaterialL, button[3].active);
+      Illuminate(pathR, pathMaterialR, button[4].active);
+   }
+   
+   public IEnumerator VoiceLines(AudioClip[] voices)
+   {
+      yield return new WaitForSeconds(1f);
+      for (int i = 0; i < voices.Length; i++)
+      {
+         yield return new WaitForSeconds(5f);
+         _audioSource.clip = voices[i];
+         _audioSource.Play();
+         yield return new WaitForSeconds(voices[i].length);
+      }
+
+      yield return new WaitForSeconds(0.3f);
+
    }
    
 }

@@ -25,9 +25,6 @@ public class Level2Manager : LevelManagerBase
    public AudioClip buttonLine;
    public AudioClip[] voiceLines;
 
-   public BoxCollider exitCollider;
-
-   
    private void Start()
    {
       buttonMaterial = Instantiate(button.GetComponent<MeshRenderer>().material);

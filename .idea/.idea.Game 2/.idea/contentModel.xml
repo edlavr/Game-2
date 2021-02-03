@@ -15,7 +15,6 @@
         <e p="CathedralFall.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Interactions" t="Include">
-            <e p="Exit.cs" t="Include" />
             <e p="GameButton.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="InteractableCube.cs" t="Include" />
