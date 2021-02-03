@@ -15,11 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Inside Cathedral.unity
     guid: 7a323acfde6224e54a0dc83d9bdef9a3
   - enabled: 1
+    path: Assets/Scenes/Test Chamber 4.unity
+    guid: fc8a1b20ac93142b0b15ae256ccebf06
+  - enabled: 1
     path: Assets/Scenes/Before the chambers.unity
     guid: dadcb9cd42b59421f93a4bfd615674d7
   - enabled: 1
     path: Assets/Scenes/Test Chamber 1.unity
-    guid: 8c35cd7ecc1bd44c6a73fe66818aae9c
+    guid: 82fd0309ba60e489688d8b89d8dfefe0
   - enabled: 1
     path: Assets/Scenes/Test Chamber 2.unity
     guid: db90ca9789a714b9fac2737872f33477

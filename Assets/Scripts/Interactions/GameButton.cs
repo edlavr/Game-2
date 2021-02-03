@@ -16,13 +16,13 @@ public class GameButton : MonoBehaviour
         _audio = GetComponent<AudioSource>();
     }
 
-    private void Update()
-    {
-        if (active)
-        {
-            Debug.Log("button");
-        }
-    }
+    // private void Update()
+    // {
+    //     if (active)
+    //     {
+    //         Debug.Log("button");
+    //     }
+    // }
     
     private void OnCollisionEnter()
     {

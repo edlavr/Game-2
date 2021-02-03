@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    
+    public GameManager gm;
     public void SelectLevel(int level)
     {
         SceneManager.LoadScene(level);
@@ -21,5 +21,10 @@ public class MainMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("Volume", volume);
+    }
+
+    public void SetMouseSensitivity(float ms)
+    {
+        gm.mouseSensitivity = ms;
     }
 }

@@ -69,11 +69,11 @@ public class Level4Manager : LevelManagerBase
          
          if (button[i].active)
          {
-            OpenDoor(door[i], doorPos[i], i < 2);
+            OpenDoor(door[i], doorPos[i], i == 1);
          }
          else
          {
-            CloseDoor(door[i], doorPos[i], i < 2);
+            CloseDoor(door[i], doorPos[i], i == 1);
          }
          Illuminate(path1, pathMaterial1, button[1].active);
 

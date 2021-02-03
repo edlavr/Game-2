@@ -11,6 +11,7 @@
             <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
+        <e p="CanvasScript.cs" t="Include" />
         <e p="CathedralFall.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Interactions" t="Include">
@@ -26,10 +27,12 @@
           </e>
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
+            <e p="Level1aManager.cs" t="Include" />
             <e p="Level1Manager.cs" t="Include" />
             <e p="Level2Manager.cs" t="Include" />
             <e p="Level3Manager.cs" t="Include" />
             <e p="Level4Manager.cs" t="Include" />
+            <e p="Level5Manager.cs" t="Include" />
             <e p="LevelManagerBase.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">

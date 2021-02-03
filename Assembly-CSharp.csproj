@@ -59,12 +59,14 @@
      <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLight.cs" />
      <Compile Include="Assets\Scripts\Movement\FirstPersonMovement.cs" />
      <Compile Include="Assets\Scripts\Interactions\PhysicsObject.cs" />
+     <Compile Include="Assets\Scripts\Managers\Level1aManager.cs" />
      <Compile Include="Assets\Scripts\Legacy\ThirdPersonMovement.cs" />
      <Compile Include="Assets\Scripts\Room\LoadNextScene.cs" />
      <Compile Include="Assets\Scripts\Interactions\GameButton.cs" />
      <Compile Include="Assets\Scripts\Interactions\InteractableCube.cs" />
      <Compile Include="Assets\Scripts\Rewind\Rewindable.cs" />
      <Compile Include="Assets\Scripts\Managers\LevelManagerBase.cs" />
+     <Compile Include="Assets\Scripts\Managers\Level4Manager.cs" />
      <Compile Include="Assets\Scripts\Room\OpenDoor.cs" />
      <Compile Include="Assets\Scripts\Rewind\RewindablePlayer.cs" />
      <Compile Include="Assets\Scripts\Legacy\PickDrop.cs" />
@@ -73,9 +75,10 @@
      <Compile Include="Assets\Volumetric Lights\Scripts\VolumetricLightRenderer.cs" />
      <Compile Include="Assets\Scripts\Interactions\Exit.cs" />
      <Compile Include="Assets\Scripts\Managers\Level1Manager.cs" />
+     <Compile Include="Assets\CanvasScript.cs" />
      <Compile Include="Assets\Scripts\UI\Notification.cs" />
      <Compile Include="Assets\Scripts\Rewind\PointInTime.cs" />
-     <Compile Include="Assets\Scripts\Managers\Level4Manager.cs" />
+     <Compile Include="Assets\Scripts\Managers\Level5Manager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Volumetric Lights\Shaders\VolumetricLight.shader" />

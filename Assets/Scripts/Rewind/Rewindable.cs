@@ -68,7 +68,6 @@ public class Rewindable : MonoBehaviour
             transform.position = pointInTime.position;
             transform.rotation = pointInTime.rotation;
             pointsInTime.RemoveAt(0);
-            _gameManager.notifications.text = "";
         }
         else
         {

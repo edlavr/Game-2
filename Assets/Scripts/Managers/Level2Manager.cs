@@ -89,6 +89,7 @@ public class Level2Manager : LevelManagerBase
 
    public IEnumerator VoiceLines(AudioClip[] voices)
    {
+      yield return new WaitForSeconds(9f);
       for (int i = 0; i < voices.Length; i++)
       {
          yield return new WaitForSeconds(1);

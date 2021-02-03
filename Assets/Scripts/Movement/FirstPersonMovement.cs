@@ -48,7 +48,7 @@ public class FirstPersonMovement : MonoBehaviour
     public float rotationSpeed = 100f;
     Quaternion lookRot;
 
-    [Header("UI")] public Image crosshair;
+    [Header("UI")] private Image crosshair;
 
     private AudioSource _audio;
     private Vector3 lastPosition;
@@ -59,6 +59,7 @@ public class FirstPersonMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         mainCamera = Camera.main;
         _audio = GetComponent<AudioSource>();
+        crosshair = GameObject.Find("Crosshair").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -136,7 +137,7 @@ public class FirstPersonMovement : MonoBehaviour
             _audio.volume = UnityEngine.Random.Range(0.4f, .5f);
             _audio.Play();
         }
-       
+
     }
     
     private void FixedUpdate()

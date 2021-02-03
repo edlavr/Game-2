@@ -6,8 +6,8 @@ public class AnimationStateController : MonoBehaviour
 {
 
     Animator animator;
-    float velocityZ = 0.0f;
-    float velocityX = 0.0f;
+    public float velocityZ = 0.0f;
+    public float velocityX = 0.0f;
     public float acceleration = 2f;
     public float deceleration = 2f;
     public float maxWalkVelocity = 0.5f;
@@ -184,5 +184,6 @@ public class AnimationStateController : MonoBehaviour
 
         animator.SetFloat(VelocityHashZ, velocityZ);
         animator.SetFloat(VelocityHashX, velocityX);
+        
     }
 }

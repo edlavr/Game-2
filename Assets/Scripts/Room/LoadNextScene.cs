@@ -7,13 +7,12 @@ using UnityEngine.UI;
 
 public class LoadNextScene : MonoBehaviour
 {
-    private GameManager gameManager;
-    public Image canvasEndGamePanel;
+    public CanvasGroup black;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        black = GameObject.Find("Black").GetComponent<CanvasGroup>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,10 +22,12 @@ public class LoadNextScene : MonoBehaviour
 
     IEnumerator loadNextScene()
     {
-        while (canvasEndGamePanel.GetComponent<CanvasGroup>().alpha < 1)
+        yield return new WaitForSeconds(10f);
+        
+        while (black.alpha < 1)
         {
             yield return new WaitForSeconds(0.01f);
-            canvasEndGamePanel.GetComponent<CanvasGroup>().alpha += 0.02f;
+            black.alpha += 0.02f;
         }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -9,13 +9,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public Collider _playerCollider;
-    public TextMeshProUGUI notifications;
 
     public KeyCode rewindKey = KeyCode.R;
     public KeyCode clearRewindKey = KeyCode.Q;
     public KeyCode interactKeyRight = KeyCode.E;
 
-    public float mouseSensitivity = 150f;
     
     public bool isRecording = false;
     public bool isRewinding = false;
@@ -23,8 +21,30 @@ public class GameManager : MonoBehaviour
 
     public static bool isPaused = false;
     public GameObject pauseMenuUI;
+
+    public float mouseSensitivity;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     
-    // public int nOfE = 0;
+    void OnEnable()
+    {
+        Debug.Log("OnEnable called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.buildIndex);
+        if (scene.buildIndex == 1)
+        {
+            pauseMenuUI = GameObject.Find("Pause Menu");
+            pauseMenuUI.SetActive(false);
+        }
+        _playerCollider = GameObject.Find("Player First Person").GetComponent<CharacterController>();
+    }
 
     void Update()
     {
