@@ -60,5 +60,11 @@ public class GameManager : MonoBehaviour
             }
             isRecording = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Cursor.visible = true;
+            SceneManager.LoadScene(0);
+        }
     }
 }

@@ -3726,6 +3726,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &574382199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3169238968850274496, guid: 1991c122564a6458296b0a8590644cdf, type: 3}
+  m_PrefabInstance: {fileID: 1275707718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e485ad0c51142b1aab0c5fcc41345e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &576605540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7014,6 +7025,14 @@ PrefabInstance:
     - target: {fileID: 3169238968850274511, guid: 1991c122564a6458296b0a8590644cdf, type: 3}
       propertyPath: m_Name
       value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169238970029062814, guid: 1991c122564a6458296b0a8590644cdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 574382199}
+    - target: {fileID: 3169238970029062814, guid: 1991c122564a6458296b0a8590644cdf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1991c122564a6458296b0a8590644cdf, type: 3}

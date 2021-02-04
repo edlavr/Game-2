@@ -372,7 +372,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh377170
+  m_Name: pb_Mesh41126
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2330,6 +2330,7 @@ GameObject:
   - component: {fileID: 1572243761824278538}
   - component: {fileID: 2556149207689880662}
   - component: {fileID: 7068015642031626805}
+  - component: {fileID: 1265060429595518990}
   m_Layer: 0
   m_Name: TexturesCom_WindowStainedGlass0098_2_M.000
   m_TagString: Untagged
@@ -2337,6 +2338,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!64 &1265060429595518990
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265060429595518989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4470301280712952078, guid: 22920031178104a3cbecb53bd9b6b089, type: 3}
 --- !u!1 &1270520744975961568
 GameObject:
   m_ObjectHideFlags: 0
@@ -7997,6 +8012,7 @@ GameObject:
   - component: {fileID: 7077641785680007330}
   - component: {fileID: 8185210843065194101}
   - component: {fileID: 8576009615894355760}
+  - component: {fileID: 8576009615894355761}
   m_Layer: 0
   m_Name: TexturesCom_WindowStainedGlass0084_1_M.000
   m_TagString: Untagged
@@ -8301,6 +8317,20 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!64 &8576009615894355761
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576009615894355759}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 799044393}
 --- !u!4 &8719117620523075612
 Transform:
   m_ObjectHideFlags: 0
